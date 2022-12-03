@@ -41,7 +41,12 @@ counts of each gender (only available for NYC and Chicago)
 earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
 ### Files used
-Include the files used
+- chicago.csv
+
+- new_york_city.csv
+
+- washington.csv
+
 
 ### Credits
 https://www.udacity.com/
