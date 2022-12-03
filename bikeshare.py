@@ -187,8 +187,7 @@ def main():
         
         # raw data
         df1 = df.iloc[ : , :len(df.columns)-2]
-        index = 0
-        lastindex = 5
+        index, lastindex = 0, 5
         while True:
             showdata = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
             if showdata.lower() == 'yes':
