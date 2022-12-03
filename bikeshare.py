@@ -204,6 +204,5 @@ def main():
         if restart.lower() != 'yes':
             break
 
-# for test: chicago, february, tuesday || washington, may, all || chicago, all, Thursday
 if __name__ == "__main__":
 	main()
