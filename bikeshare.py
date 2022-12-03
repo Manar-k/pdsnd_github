@@ -118,9 +118,9 @@ def station_stats(df):
     print('The most commonly used end station: ',df["End Station"].mode()[0])
 
     # display most frequent combination of start station and end station trip
-    print('The most frequent combination of start station and end station trip: \n',
-          df.groupby(["Start Station","End Station"])['Start Station'].count().idxmax(),' ',
-         df.groupby(["Start Station","End Station"])['Start Station'].count().max())
+    print('The most frequent combination of start station and end station trip: \n {} {}'.format(
+        df.groupby(["Start Station","End Station"])['Start Station'].count().idxmax(),
+        df.groupby(["Start Station","End Station"])['Start Station'].count().max()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -187,8 +187,7 @@ def main():
         
         # raw data
         df1 = df.iloc[ : , :len(df.columns)-2]
-        index = 0
-        lastindex = 5
+        index, lastindex = 0, 5
         while True:
             showdata = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
             if showdata.lower() == 'yes':
@@ -204,6 +203,5 @@ def main():
         if restart.lower() != 'yes':
             break
 
-# for test: chicago, february, tuesday || washington, may, all || chicago, all, Thursday
 if __name__ == "__main__":
 	main()
